@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimalist Shop - Sepet Entegre</title>
+
+    <!-- Google font + Font Awesome (aynı kaldı) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Dış dosya: stil -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo" onclick="switchPage('home')">SHOP</div>
+        
+        <nav>
+            <ul>
+                <li><a onclick="switchPage('home')" id="nav-home" class="active">Home</a></li>
+                <li><a onclick="switchPage('shop')" id="nav-shop">Shop</a></li>
+                <li><a onclick="switchPage('about')" id="nav-about">About</a></li>
+                <li><a onclick="switchPage('contact')" id="nav-contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-icons">
+            <i class="fas fa-search"></i>
+            <div class="cart-btn-wrapper" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+        
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="active-page">
+            <div class="hero">
+                <h1>Shop the latest trends</h1>
+                <p>New arrivals in clothing, shoes, accessories, and more</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="section-header">Shop by category</div>
+            <div class="grid-4">
+                <div class="cat-card"><div class="cat-img"><img src="clothing.jpg" alt="Cat"></div><div class="cat-name">Clothing</div></div>
+                <div class="cat-card"><div class="cat-img"><img src="shoes.jpg" alt="Cat"></div><div class="cat-name">Shoes</div></div>
+                <div class="cat-card"><div class="cat-img"><img src="accessories.jpg" alt="Cat"></div><div class="cat-name">Accessories</div></div>
+                <div class="cat-card"><div class="cat-img"><img src="watches.jpg" alt="Cat"></div><div class="cat-name">Watches</div></div>
+            </div>
+
+            <div class="section-header">Featured products</div>
+            <div class="grid-4">
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Beige-Pants.jpg" alt="Prd"></div>
+                    <div class="p-title">Beige Pants</div>
+                    <div class="p-price">$49.99</div>
+                    <button class="btn-black" onclick="addToCart('BeigePants', 49.99, 'Beige-Pants.jpg')">Add to cart</button>
+                </div>
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Black-Basic-Tee.jpg" alt="Prd"></div>
+                    <div class="p-title">Black Basic Tee</div>
+                    <div class="p-price">$19.99</div>
+                    <button class="btn-black" onclick="addToCart('Black Basic Tee', 19.99, 'Black-Basic-Tee.jpg')">Add to cart</button>
+                </div>
+                <div class="product-card"><div class="p-img-box"><img src="Runner-Grey.jpg" alt="Prd"></div><div class="p-title">Runner Grey</div><div class="p-price">$89.99</div>
+                    <button class="btn-black" onclick="addToCart('Runner Grey', 89.99, 'Runner-Grey.jpg')">Add to cart</button>
+                </div>
+                <div class="product-card"><div class="p-img-box"><img src="Leather-Pack.jpg" alt="Prd"></div><div class="p-title">Leather Pack</div><div class="p-price">$59.99</div>
+                    <button class="btn-black" onclick="addToCart('Leather Pack', 59.99, 'Leather-Pack.jpg')">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="shop">
+            <h1 class="page-title">Products</h1>
+            <div class="filter-txt">Filter</div>
+
+            <div class="grid-3">
+                <div class="product-card">
+                    <div class="p-img-box"><img src="White-T-Shirt.jpg" alt="White T"></div>
+                    <h3 class="p-title">White T-Shirt</h3>
+                    <div class="p-price">$19.99</div>
+                    <button class="btn-black" onclick="addToCart('White T-Shirt', 19.99, 'White-T-Shirt.jpg')">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Black-T-Shirt.jpg" alt="Black T"></div>
+                    <h3 class="p-title">Black T-Shirt</h3>
+                    <div class="p-price">$21.99</div>
+                    <button class="btn-black" onclick="addToCart('Black T-Shirt', 21.99, 'Black-T-Shirt.jpg')">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Denim-Jacket.jpg" alt="Jacket"></div>
+                    <h3 class="p-title">Denim Jacket</h3>
+                    <div class="p-price">$79.99</div>
+                    <button class="btn-black" onclick="addToCart('Denim Jacket', 79.99, 'Denim-Jacket.jpg')">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Leather-Bag.jpg" alt="Bag"></div>
+                    <h3 class="p-title">Leather Bag</h3>
+                    <div class="p-price">$89.99</div>
+                    <button class="btn-black" onclick="addToCart('Leather Bag', 89.99, 'Leather-Bag.jpg')">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Laptop.jpg" alt="Laptop"></div>
+                    <h3 class="p-title">Laptop</h3>
+                    <div class="p-price">$1289.99</div>
+                    <button class="btn-black" onclick="addToCart('Laptop', 1289.99, 'Laptop.jpg')">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="p-img-box"><img src="Sneakers.jpg" alt="Sneaker"></div>
+                    <h3 class="p-title">Sneakers</h3>
+                    <div class="p-price">$59.99</div>
+                    <button class="btn-black" onclick="addToCart('Sneakers', 59.99, 'Sneakers.jpg')">Add to cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h1 class="page-title">About</h1>
+            <div class="about-layout">
+                <div class="about-text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac malesuada tortor. Sed eget arcu ut lectus gravida varius in vitae risus. Integer dui ex, hendrerit eget quam id, fermentum hendrerit nisi.</p>
+                    <br>
+                    <p>Aenean et ligula consectetur, hendrerit risus at, mollis urna. Ut venenatis velit ut ante consequat condimentum.</p>
+                </div>
+                <div class="about-img">
+                    <img src="About.png" alt="About Image">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1 class="page-title">Contact</h1>
+            <div class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-input" placeholder="Message"></textarea>
+                </div>
+                <button class="btn-send">Send</button>
+            </div>
+        </section>
+
+    </main>
+    
+    <div class="cart-modal-overlay" id="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <div class="close-cart" onclick="toggleCart()">
+                    <i class="fas fa-times"></i> 
+                </div>
+            </div>
+            
+            <div class="cart-items" id="cart-items-container">
+                <p style="text-align:center; margin-top:50px; color:#999;">Your cart is empty.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="total-price">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn-checkout" onclick="checkout()">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dış dosya: script -->
+    <script src="script.js"></script>
+</body>
+</html>
